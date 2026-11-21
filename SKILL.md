@@ -6,6 +6,11 @@ name: xhs-probe
 description: "小红薯账号体检数据源（只读）：关键词搜笔记、爆款选题、笔记详情、评论舆情、博主作品、粉丝获赞与收藏，输出 JSON，不登录不发布。触发词：小红书、小红薯、xhs、rednote、笔记链接、博主主页、竞品监控、KOL筛选、评论分析。用户要查小红书笔记、评论、选题、竞品或舆情时使用；抖音、快手、B站、微博、公众号不要用本技能。"
 license: MIT
 version: 1.2.3
+display_name: "小红薯账号体检｜健康度诊断·内容短板·发布节奏·改进清单"
+display_name_en: "Rednote Probe"
+description_zh: "小红薯（小红书）账号体检数据源（只读，无需登录你的小红书账号，不发布不点赞不评论，无封号风险）：一条链接或关键词即可取回公开数据并输出结构化 JSON，交给 AI 做健康度诊断、内容短板定位、发布节奏评分与改进清单落地。\n\n五类取数能力：①关键词搜笔记，支持图文/视频、综合/最新/最多点赞/最多评论/最多收藏排序与 1 天/1 周/半年时间范围；②笔记详情：正文、图片、点赞收藏评论分享与作者；③评论抓取，可按近 N 天过滤，看评论区在夸还是在骂；④博主作品列表，带发布时间与互动；⑤--limit 0 只取粉丝数、获赞与收藏，算互动率。\n\n体检打法：先拉作品列表看发文节奏与内容短板，再用评论找痛点，产出改进清单。支持口语化指令，只处理小红书，不误查抖音快手。\n\n规模：按量 Token 单次最多 10000 条；包月搜索最多 40、作品 30、评论 20，超限返回 PLAN_LIMIT。需 Node.js 16.14+ 与 GUAIKEI_API_TOKEN，零第三方依赖，国内直连不用代理。"
+description_en: "Read-only Xiaohongshu (RED) account-audit data source: no login, no posting, liking or commenting, no ban risk. Feed one link or keyword, get public data as structured JSON so AI can score account health, find content gaps, grade posting cadence and build an improvement checklist.\n\nCapabilities: keyword note search (image/video, sorted by relevance/newest/likes/comments/collects, 1-day/1-week/6-month windows); note detail (text, images, likes, collects, comments, shares, author); comment scraping filtered by last N days; creator post list with publish time and engagement; --limit 0 for follower, like and collect counts to compute engagement rate.\n\nAudit recipe: read cadence and weak spots from posts, mine comments for pain points, then output an improvement checklist. Xiaohongshu only, never Douyin or Kuaishou.\n\nScale: 10,000 items per call pay-as-you-go; monthly cap search 40, posts 30, comments 20, then PLAN_LIMIT. Needs Node.js 16.14+ and GUAIKEI_API_TOKEN."
+author: "新郑市怪奇信息技术工作室"
 category: 数据分析
 homepage: https://www.guaikei.com
 metadata:
